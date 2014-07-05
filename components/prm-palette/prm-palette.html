@@ -7,14 +7,15 @@
 
 <polymer-element name="prm-palette">
 <template>
-    <style shim-shadowdom>
+    <style>
         #paletteContainer {
             position: relative;
-            background: #fff;
+            float: right;
             width: 380px;
             height: 300px;
+            top: 10px;
+            right: 10px;
             font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
-            margin: 0;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -23,15 +24,71 @@
             -webkit-touch-callout: none;
         }
 
+        /* light theme */
+        #paletteContainer.light-theme{
+            background: #fff;
+        }
 
-        paper-tabs::shadow {
-            background-color: #fff;
-            color: #03a9f4;
+        .light-theme paper-tabs {
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
         }
 
-        paper-tabs::shadow #selectionBar {
+        .light-theme paper-tabs::shadow {
+            background-color: #fff;
+            color: #03a9f4;
+        }
+
+        .light-theme paper-tabs::shadow #selectionBar {
             background-color: #03a9f4;
+        }
+
+        .light-theme prm-labeled-slider /deep/ #sliderKnobInner,
+        .light-theme prm-labeled-slider /deep/ #sliderBar::shadow #activeProgress,
+        .light-theme prm-labeled-slider /deep/ #secondaryProgress,
+        .light-theme paper-input /deep/ .focusedColor {
+            background-color: #03a9f4;
+        }
+        /* dark theme */
+        #paletteContainer.dark-theme {
+            background: #1f1f1f;
+            border: 1px solid #444444;
+        }
+
+        .dark-theme paper-tabs {
+            box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+        }
+
+        .dark-theme paper-tabs::shadow {
+            background-color: #303030;
+            color: #03a9f4;
+        }
+
+        .dark-theme paper-tabs::shadow #selectionBar {
+            background-color: #03a9f4;
+        }
+
+        .dark-theme prm-labeled-slider /deep/ #sliderLabel,
+        .dark-theme prm-labeled-slider /deep/ #input {
+            color: #eee;
+        }
+
+        .dark-theme prm-labeled-slider /deep/ #sliderKnobInner,
+        .dark-theme prm-labeled-slider /deep/ #sliderBar::shadow #activeProgress,
+        .dark-theme prm-labeled-slider /deep/ #secondaryProgress,
+        .dark-theme paper-input /deep/ .focusedColor{
+            background-color: #03a9f4;
+        }
+
+        .dark-theme prm-labeled-slider /deep/ #sliderKnob.ring > #sliderKnobInner {
+            background-color: #222222;
+        }
+
+        .dark-theme prm-labeled-slider /deep/ #progressContainer {
+            background-color: #757575;
+        }
+
+        /* common properties (for all themes) */
+        paper-tabs::shadow #selectionBar {
             height: 4px;
         }
 
@@ -39,14 +96,11 @@
             padding: 10px 20px 20px 20px;
         }
 
-        paper-tabs {
-            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-        }
-
     </style>
 
-<div id="paletteContainer">
+<div id="paletteContainer" class="dark-theme">
     <paper-shadow z="1"></paper-shadow>
+
     <paper-tabs selected="{{page}}" noink>
         <paper-tab>First Tab</paper-tab>
         <paper-tab>Second Tab</paper-tab>
