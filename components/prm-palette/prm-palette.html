@@ -1,0 +1,32 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../font-roboto/roboto.html">
+<link rel="import" href="../prm-labeled-slider/prm-labeled-slider.html">
+<link rel="import" href="../paper-shadow/paper-shadow.html">
+
+<polymer-element name="prm-palette">
+<template>
+    <style>
+        #paletteContainer {
+            position: relative;
+            background: #fff;
+            width: 350px;
+            padding: 20px;
+            font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+            margin: 0;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-touch-callout: none;
+        }
+    </style>
+<div id="paletteContainer">
+    <paper-shadow z="1"></paper-shadow>
+    <content></content>
+</div>
+</template>
+<script>
+    Polymer('prm-palette');
+</script>
+</polymer-element>

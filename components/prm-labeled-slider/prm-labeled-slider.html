@@ -1,0 +1,29 @@
+<link rel="import" href="../paper-slider/paper-slider.html">
+
+<polymer-element name="prm-labeled-slider" attributes="label" extends="paper-slider">
+<template>
+    <style>
+        :host {
+            width: 350px;
+            height: 50px;
+        }
+
+        #sliderLabel {
+            padding-right: 10px;
+            width: 100px;
+            text-align: left;
+        }
+
+    </style>
+    <div center horizontal layout>
+        <div id="sliderLabel">{{label}}</div>
+        <shadow></shadow> <!-- renders the slider -->
+    </div>
+</template>
+<script>
+    Polymer('prm-labeled-slider', {
+        label: "",
+        editable: true
+    });
+</script>
+</polymer-element>
