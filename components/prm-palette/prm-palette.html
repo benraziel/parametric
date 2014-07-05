@@ -1,16 +1,18 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../font-roboto/roboto.html">
 <link rel="import" href="../prm-labeled-slider/prm-labeled-slider.html">
+<link rel="import" href="../core-pages/core-pages.html">
 <link rel="import" href="../paper-shadow/paper-shadow.html">
+<link rel="import" href="../paper-tabs/paper-tabs.html">
 
 <polymer-element name="prm-palette">
 <template>
-    <style>
+    <style shim-shadowdom>
         #paletteContainer {
             position: relative;
             background: #fff;
-            width: 350px;
-            padding: 20px;
+            width: 380px;
+            height: 300px;
             font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
             margin: 0;
             -webkit-user-select: none;
@@ -20,13 +22,50 @@
             -webkit-tap-highlight-color: rgba(0,0,0,0);
             -webkit-touch-callout: none;
         }
+
+
+        paper-tabs::shadow {
+            background-color: #fff;
+            color: #03a9f4;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        paper-tabs::shadow #selectionBar {
+            background-color: #03a9f4;
+            height: 4px;
+        }
+
+        core-pages div {
+            padding: 10px 20px 20px 20px;
+        }
+
+        paper-tabs {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
     </style>
+
 <div id="paletteContainer">
     <paper-shadow z="1"></paper-shadow>
-    <content></content>
+    <paper-tabs selected="{{page}}" noink>
+        <paper-tab>First Tab</paper-tab>
+        <paper-tab>Second Tab</paper-tab>
+    </paper-tabs>
+
+    <core-pages selected="{{page}}">
+        <div> <!-- page 0 -->
+            <prm-labeled-slider id="slider0" label="integer slider" min="0" max="50"></prm-labeled-slider>
+            <prm-labeled-slider id="slider1" label="fractional slider" min="10" max="30" step="0.01"></prm-labeled-slider>
+            <prm-labeled-slider id="slider2" label="another slider"></prm-labeled-slider>
+        </div>
+        <div> <!-- page 1 -->
+            <prm-labeled-slider id="slider3" label="third slider"></prm-labeled-slider>
+        </div>
+    </core-pages>
 </div>
+
 </template>
 <script>
-    Polymer('prm-palette');
+    Polymer('prm-palette', {page:0});
 </script>
 </polymer-element>
