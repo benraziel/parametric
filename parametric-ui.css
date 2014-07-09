@@ -14,11 +14,15 @@
     -webkit-touch-callout: none;
 }
 
-/* light theme */
+/*
+    light theme
+    ===========
+*/
 #paletteContainer.light-theme{
     background: #fff;
 }
 
+/* tabs */
 .light-theme paper-tabs {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
 }
@@ -32,6 +36,7 @@
     background-color: #03a9f4;
 }
 
+/* slider */
 .light-theme prm-slider /deep/ #sliderKnobInner,
 .light-theme prm-slider /deep/ #sliderBar::shadow #activeProgress,
 .light-theme prm-slider /deep/ #secondaryProgress,
@@ -39,12 +44,30 @@
     background-color: #03a9f4;
 }
 
-/* dark theme */
+/* toggle-button */
+.light-theme prm-toggle-button /deep/ #toggleContainer,
+.light-theme prm-toggle-button /deep/ #offRadio                                      {
+    border-color: #c8c8c8;
+}
+
+.light-theme prm-toggle-button /deep/ #onRadio {
+    background-color: #03a9f4;
+}
+
+.light-theme prm-toggle-button /deep/ #ink[checked] {
+    color: #03a9f4;
+}
+
+/*
+    dark theme
+    ==========
+*/
 #paletteContainer.dark-theme {
     background: #1f1f1f;
     border: 1px solid #444444;
 }
 
+/* tabs */
 .dark-theme paper-tabs {
     box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
 }
@@ -58,6 +81,7 @@
     background-color: #03a9f4;
 }
 
+/* slider */
 .dark-theme prm-slider /deep/ #sliderLabel,
 .dark-theme prm-slider /deep/ #input {
     color: #eee;
@@ -78,11 +102,44 @@
     background-color: #757575;
 }
 
-/* common properties (for all themes) */
+/* toggle button */
+.dark-theme prm-toggle-button /deep/ #toggleContainer {
+    border-color: #757575;
+}
+
+.dark-theme prm-toggle-button /deep/ #toggleLabel {
+    color: #eee;
+}
+
+.dark-theme prm-toggle-button /deep/ #offRadio {
+    border-color: #c8c8c8;
+}
+
+.dark-theme prm-toggle-button /deep/ #onRadio {
+    background-color: #03a9f4;
+}
+
+.dark-theme prm-toggle-button /deep/ #ink {
+    color: #aaa;
+}
+
+.dark-theme prm-toggle-button /deep/ #ink[checked] {
+    color: #03a9f4;
+}
+
+/*
+    common properties (for all themes)
+    =================================
+*/
 paper-tabs::shadow #selectionBar {
     height: 4px;
 }
 
 core-pages div {
     padding: 10px 20px 20px 20px;
+}
+
+prm-toggle-button /deep/ #onRadio.fill { /* cancels the x1.1 scale of the toggle button knob */
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
 }

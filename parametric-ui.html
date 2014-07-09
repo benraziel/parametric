@@ -1,13 +1,14 @@
 <link rel="import" href="components/polymer/polymer.html">
 <link rel="import" href="components/font-roboto/roboto.html">
-<link rel="import" href="components/prm-slider/prm-slider.html">
 <link rel="import" href="components/core-pages/core-pages.html">
 <link rel="import" href="components/paper-shadow/paper-shadow.html">
 <link rel="import" href="components/paper-tabs/paper-tabs.html">
+<link rel="import" href="components/prm-slider/prm-slider.html">
+<link rel="import" href="components/prm-toggle-button/prm-toggle-button.html">
 
 <polymer-element name="parametric-ui">
 <template>
-    <link rel="stylesheet" href="parametric-ui.css" >
+    <link rel="stylesheet" href="parametric-ui.css">
 
 <div id="paletteContainer" class="light-theme">
     <paper-shadow z="1"></paper-shadow>
@@ -22,6 +23,7 @@
             <prm-slider id="slider0" label="integer slider" min="0" max="50"></prm-slider>
             <prm-slider id="slider1" label="fractional slider" min="10" max="30" step="0.01"></prm-slider>
             <prm-slider id="slider2" label="another slider"></prm-slider>
+            <prm-toggle-button id="toggle0" label="toggle button"></prm-toggle-button>
         </div>
         <div> <!-- page 1 -->
             <prm-slider id="slider3" label="third slider"></prm-slider>
