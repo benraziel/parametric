@@ -28,7 +28,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 }
 
 :host(:not(.core-selected)) .tab-content {
-  opacity: 0.6;
+  opacity: 0.85;
 }
 
 #ink {

@@ -1,0 +1,24 @@
+<polymer-element name="prm-dropdown" attributes="label options">
+<template>
+
+  <link rel="stylesheet" href="prm-dropdown.css">
+
+  <div id="dropdownContainer" center horizontal layout>
+      <div id="dropdownLabel">{{label}}</div>
+      <select id="dropdownSelect">
+        <template repeat="{{op in options}}">
+            <option value="{{op}}">{{op}}</option>
+        </template>
+      </select>
+  </div>
+
+</template>
+<script>
+
+  Polymer('prm-dropdown', {
+    label: "",
+    options: []
+  });
+
+</script>
+</polymer-element>

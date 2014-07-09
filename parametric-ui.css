@@ -127,6 +127,28 @@
     color: #03a9f4;
 }
 
+/* dropdown */
+.dark-theme prm-dropdown /deep/ #dropdownLabel {
+    color: #eee;
+}
+
+.dark-theme prm-dropdown /deep/ #dropdownContainer::after {
+    color: #eee;
+    content: "▼";
+    right: 0;
+    top: 0;
+    font-size: 60%;
+}
+
+.dark-theme prm-dropdown /deep/ #dropdownSelect {
+    color: #eee;
+    background-color: #222222;
+    border-color: #757575;
+    -webkit-appearance: none;
+    margin-right: -20px;
+    padding-right: 20px;
+}
+
 /*
     common properties (for all themes)
     =================================
