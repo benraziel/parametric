@@ -1,0 +1,36 @@
+<link rel="import" href="components/polymer/polymer.html">
+<link rel="import" href="components/font-roboto/roboto.html">
+<link rel="import" href="components/prm-slider/prm-slider.html">
+<link rel="import" href="components/core-pages/core-pages.html">
+<link rel="import" href="components/paper-shadow/paper-shadow.html">
+<link rel="import" href="components/paper-tabs/paper-tabs.html">
+
+<polymer-element name="parametric-ui">
+<template>
+    <link rel="stylesheet" href="parametric-ui.css" >
+
+<div id="paletteContainer" class="light-theme">
+    <paper-shadow z="1"></paper-shadow>
+
+    <paper-tabs selected="{{page}}" noink>
+        <paper-tab>First Tab</paper-tab>
+        <paper-tab>Second Tab</paper-tab>
+    </paper-tabs>
+
+    <core-pages selected="{{page}}">
+        <div> <!-- page 0 -->
+            <prm-slider id="slider0" label="integer slider" min="0" max="50"></prm-slider>
+            <prm-slider id="slider1" label="fractional slider" min="10" max="30" step="0.01"></prm-slider>
+            <prm-slider id="slider2" label="another slider"></prm-slider>
+        </div>
+        <div> <!-- page 1 -->
+            <prm-slider id="slider3" label="third slider"></prm-slider>
+        </div>
+    </core-pages>
+</div>
+
+</template>
+<script>
+    Polymer('parametric-ui', {page:0});
+</script>
+</polymer-element>
