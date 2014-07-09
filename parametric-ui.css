@@ -132,8 +132,13 @@
     color: #eee;
 }
 
+.dark-theme prm-dropdown /deep/ #dropdownSelect::-ms-expand {
+    display: none; /* hides the select arrow in IE */
+}
+
 .dark-theme prm-dropdown /deep/ #dropdownContainer::after {
-    content: "▼";
+    content: "▼"; /* displays a fake 'arrow', on top of the browser's default select arrow */
+    display: inline-block;
     color: #eee;
     top: 0px;
     right: 0px;

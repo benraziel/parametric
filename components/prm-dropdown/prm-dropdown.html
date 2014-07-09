@@ -6,9 +6,7 @@
   <div id="dropdownContainer" center horizontal layout>
       <div id="dropdownLabel">{{label}}</div>
       <select id="dropdownSelect">
-        <template repeat="{{op in options}}">
-            <option value="{{op}}">{{op}}</option>
-        </template>
+        <option template repeat="{{options}}">{{}}</option>
       </select>
   </div>
 
