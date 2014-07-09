@@ -32,9 +32,9 @@
     background-color: #03a9f4;
 }
 
-.light-theme prm-labeled-slider /deep/ #sliderKnobInner,
-.light-theme prm-labeled-slider /deep/ #sliderBar::shadow #activeProgress,
-.light-theme prm-labeled-slider /deep/ #secondaryProgress,
+.light-theme prm-slider /deep/ #sliderKnobInner,
+.light-theme prm-slider /deep/ #sliderBar::shadow #activeProgress,
+.light-theme prm-slider /deep/ #secondaryProgress,
 .light-theme paper-input /deep/ .focusedColor {
     background-color: #03a9f4;
 }
@@ -49,32 +49,32 @@
     box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
 }
 
-.dark-theme paper-tabs::shadow {
-    background-color: #303030;
+.dark-theme paper-tabs /deep/ #tabContainer {
     color: #03a9f4;
+    background-color: #303030;
 }
 
 .dark-theme paper-tabs::shadow #selectionBar {
     background-color: #03a9f4;
 }
 
-.dark-theme prm-labeled-slider /deep/ #sliderLabel,
-.dark-theme prm-labeled-slider /deep/ #input {
+.dark-theme prm-slider /deep/ #sliderLabel,
+.dark-theme prm-slider /deep/ #input {
     color: #eee;
 }
 
-.dark-theme prm-labeled-slider /deep/ #sliderKnobInner,
-.dark-theme prm-labeled-slider /deep/ #sliderBar::shadow #activeProgress,
-.dark-theme prm-labeled-slider /deep/ #secondaryProgress,
+.dark-theme prm-slider /deep/ #sliderKnobInner,
+.dark-theme prm-slider /deep/ #sliderBar::shadow #activeProgress,
+.dark-theme prm-slider /deep/ #secondaryProgress,
 .dark-theme paper-input /deep/ .focusedColor{
     background-color: #03a9f4;
 }
 
-.dark-theme prm-labeled-slider /deep/ #sliderKnob.ring > #sliderKnobInner {
+.dark-theme prm-slider /deep/ #sliderKnob.ring > #sliderKnobInner {
     background-color: #222222;
 }
 
-.dark-theme prm-labeled-slider /deep/ #progressContainer {
+.dark-theme prm-slider /deep/ #progressContainer {
     background-color: #757575;
 }
 
