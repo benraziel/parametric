@@ -41,8 +41,8 @@
 }
 
 .focusedColor {
-  color: #4059a9;
-  background: #4059a9;
+  color: #03a9f4;
+  background: #03a9f4;
 }
 
 :host(.invalid) #underline,
