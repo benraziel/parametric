@@ -46,7 +46,7 @@
 
 /* toggle-button */
 .light-theme prm-toggle-button /deep/ #toggleContainer,
-.light-theme prm-toggle-button /deep/ #offRadio                                      {
+.light-theme prm-toggle-button /deep/ #offRadio {
     border-color: #c8c8c8;
 }
 
