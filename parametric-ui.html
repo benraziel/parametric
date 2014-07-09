@@ -11,7 +11,7 @@
 <template>
     <link rel="stylesheet" href="parametric-ui.css">
 
-<div id="paletteContainer" class="light-theme">
+<div id="paletteContainer" class="dark-theme">
     <paper-shadow z="1"></paper-shadow>
 
     <paper-tabs selected="{{page}}" noink>
@@ -20,14 +20,14 @@
     </paper-tabs>
 
     <core-pages selected="{{page}}">
-        <div> <!-- page 0 -->
+        <div class="page"> <!-- page 0 -->
             <prm-slider id="slider0" label="integer slider" min="0" max="50"></prm-slider>
             <prm-slider id="slider1" label="fractional slider" min="10" max="30" step="0.01"></prm-slider>
             <prm-slider id="slider2" label="another slider"></prm-slider>
             <prm-toggle-button id="toggle0" label="toggle button"></prm-toggle-button>
             <prm-dropdown id="dropdown0" label="dropdown" options='["option1", "option2", "option3"]'></prm-dropdown>
         </div>
-        <div> <!-- page 1 -->
+        <div class="page"> <!-- page 1 -->
             <prm-slider id="slider3" label="third slider"></prm-slider>
         </div>
     </core-pages>

@@ -2,7 +2,7 @@
     position: relative;
     float: right;
     width: 380px;
-    height: 300px;
+    height: 350px;
     top: 10px;
     right: 10px;
     font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
@@ -133,11 +133,18 @@
 }
 
 .dark-theme prm-dropdown /deep/ #dropdownContainer::after {
-    color: #eee;
     content: "▼";
-    right: 0;
-    top: 0;
+    color: #eee;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
     font-size: 60%;
+    line-height: 26px;
+    padding: 0px 5px;
+    margin-right: 0px;
+    background: none repeat scroll 0% 0% #757575;
+    pointer-events: none;
+    border-radius: 0px 5px 5px 0px;
 }
 
 .dark-theme prm-dropdown /deep/ #dropdownSelect {
@@ -157,7 +164,7 @@ paper-tabs::shadow #selectionBar {
     height: 4px;
 }
 
-core-pages div {
+core-pages .page {
     padding: 10px 20px 20px 20px;
 }
 
