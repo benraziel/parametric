@@ -1,7 +1,7 @@
 #paletteContainer {
     position: absolute;
     float: right;
-    width: 380px;
+    width: 360px;
     height: 350px;
     top: 10px;
     right: 10px;
@@ -171,7 +171,7 @@ paper-tabs::shadow #selectionBar {
 }
 
 core-pages .page {
-    padding: 10px 20px 20px 20px;
+    padding: 15px 20px 20px 20px;
 }
 
 prm-toggle-button /deep/ #onRadio.fill { /* cancels the x1.1 scale of the toggle button knob */

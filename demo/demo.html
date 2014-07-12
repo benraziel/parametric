@@ -46,6 +46,13 @@
                             _this.renderer.setClearColor(0xffffff, 1);
                         }
                     });
+
+            var rotateToggle = parametric.$['rotate-toggle'];
+            rotateToggle.addEventListener('change',
+                    function rotateChanged() {
+                        console.log("rotateChanged!!!");
+                        shouldRotate = rotateToggle.checked;
+                    });
         });
 
     </script>
@@ -54,15 +61,30 @@
 
         // revolutions per second
         var angularSpeed = 0.1;
+        var shouldRotate = true;
         var lastTime = 0;
 
         // this function is executed on each animation frame
-        function animate(){
+        function animate() {
             // update
+            if (parametric.$ !== undefined) {
+                var widthSlider = parametric.$['width-slider'];
+                var heightSlider = parametric.$['height-slider'];
+                var speedSlider = parametric.$['speed-slider'];
+
+                cylinder.scale.x = widthSlider.immediateValue / 100;
+                cylinder.scale.y = heightSlider.immediateValue / 100;
+                angularSpeed = speedSlider.immediateValue;
+            }
+
             var time = (new Date()).getTime();
             var timeDiff = time - lastTime;
             var angleChange = angularSpeed * timeDiff * 2 * Math.PI / 1000;
-            cylinder.rotation.x += angleChange;
+
+            if (shouldRotate) {
+                cylinder.rotation.x += angleChange;
+            }
+
             lastTime = time;
 
             // render
