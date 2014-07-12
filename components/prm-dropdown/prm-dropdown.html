@@ -5,7 +5,7 @@
 
   <div id="dropdownContainer" center horizontal layout>
       <div id="dropdownLabel">{{label}}</div>
-      <select id="dropdownSelect">
+      <select id="dropdownSelect" selectedIndex="{{selectedIndex}}">
         <option template repeat="{{options}}">{{}}</option>
       </select>
   </div>
@@ -15,7 +15,20 @@
 
   Polymer('prm-dropdown', {
     label: "",
-    options: []
+    options: [],
+    selectedIndex: 0,
+    selectedValue: "",
+
+    domReady: function() {
+        this.selectedValue = this.$.dropdownSelect[this.selectedIndex].text;
+    },
+
+    selectedIndexChanged: function() {
+        console.log("dropdown firing currentIndexChanged!");
+        this.selectedValue = this.$.dropdownSelect[this.selectedIndex].text;
+        this.fire('change');
+    }
+
   });
 
 </script>

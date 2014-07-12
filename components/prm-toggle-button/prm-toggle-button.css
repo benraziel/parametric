@@ -9,7 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 :host {
   display: inline-block;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 :host(:focus) {

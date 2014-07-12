@@ -6,16 +6,49 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Parametric UI Demo</title>
+    <script src="three.min.js"></script>
     <link rel="stylesheet" type="text/css" href="demo.css">
+
     <script src="../components/platform/platform.js"></script>
     <link rel="import" href="../parametric-ui.html">
 </head>
 
 <body unresolved>
     <div id="webgl-container"></div>
-    <parametric-ui></parametric-ui>
+    <parametric-ui id="parametric"></parametric-ui>
 
-    <script src="three.min.js"></script>
+    <script>
+        window.addEventListener('polymer-ready', function(e) {
+            // Event Handlers
+            var parametric = document.querySelector('#parametric');
+            var paletteContainer = parametric.$['paletteContainer'];
+            var _this = this;
+
+            var themeDropdown = parametric.$['theme-dropdown'];
+            themeDropdown.addEventListener('change',
+                    function themeChanged() {
+                        if (themeDropdown.selectedValue === "Light") {
+                            paletteContainer.className = 'light-theme';
+                        }
+                        else // dark theme
+                        {
+                            paletteContainer.className = 'dark-theme'
+                        }
+                    });
+
+            var bgcolorDropdown = parametric.$['bgcolor-dropdown'];
+            bgcolorDropdown.addEventListener('change',
+                    function bgcolorChanged() {
+                        if (bgcolorDropdown.selectedValue === "Black") {
+                            _this.renderer.setClearColor(0x000000, 1);
+                        }
+                        else { // white
+                            _this.renderer.setClearColor(0xffffff, 1);
+                        }
+                    });
+        });
+
+    </script>
     <script defer="defer">
         var camera, renderer;
 
