@@ -70,6 +70,15 @@ prm-toggle-button /deep/ #canvas {
     color: #03a9f4;
 }
 
+.light-theme prm-dropdown /deep/ #dropdownSelect {
+    background-color: #fff;
+    border-color: #c8c8c8;
+}
+
+.light-theme prm-dropdown /deep/ #dropdownContainer::after {
+    color: #fff;
+    background: none repeat scroll 0% 0% #c8c8c8;
+}
 /*
     dark theme
     ==========
@@ -144,33 +153,15 @@ prm-toggle-button /deep/ #canvas {
     color: #eee;
 }
 
-.dark-theme prm-dropdown /deep/ #dropdownSelect::-ms-expand {
-    display: none; /* hides the select arrow in IE */
-}
-
-.dark-theme prm-dropdown /deep/ #dropdownContainer::after {
-    content: "▼"; /* displays a fake 'arrow', on top of the browser's default select arrow */
-    display: inline-block;
-    color: #eee;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    font-size: 60%;
-    line-height: 26px;
-    padding: 0px 5px;
-    margin-right: 0px;
-    background: none repeat scroll 0% 0% #757575;
-    pointer-events: none;
-    border-radius: 0px 5px 5px 0px;
-}
-
 .dark-theme prm-dropdown /deep/ #dropdownSelect {
     color: #eee;
     background-color: #222222;
     border-color: #757575;
-    -webkit-appearance: none;
-    margin-right: -20px;
-    padding-right: 20px;
+}
+
+.dark-theme prm-dropdown /deep/ #dropdownContainer::after {
+    color: #eee;
+    background: none repeat scroll 0% 0% #757575;
 }
 
 /*
@@ -188,4 +179,29 @@ core-pages .page {
 prm-toggle-button /deep/ #onRadio.fill { /* cancels the x1.1 scale of the toggle button knob */
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
+}
+
+
+prm-dropdown /deep/ #dropdownContainer::after {
+    content: "▼"; /* displays a fake 'arrow', on top of the browser's default select arrow */
+    display: inline-block;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-size: 60%;
+    line-height: 26px;
+    padding: 0px 5px;
+    margin-right: 0px;
+    pointer-events: none;
+    border-radius: 0px 5px 5px 0px;
+}
+
+prm-dropdown /deep/ #dropdownSelect {
+    -webkit-appearance: none;
+    margin-right: -20px;
+    padding-right: 20px;
+}
+
+prm-dropdown /deep/ #dropdownSelect::-ms-expand {
+    display: none; /* hides the select arrow in IE */
 }
