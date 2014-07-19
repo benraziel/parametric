@@ -11,7 +11,8 @@
 
 #dropdownSelect {
     margin-left: 13px;
-    padding: 5px;
+    padding: 3px;
+    height: 26px;
     border: 2px solid #c8c8c8;
     border-radius: 8px;
     outline: 0;
