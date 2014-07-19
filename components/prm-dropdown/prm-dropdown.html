@@ -20,12 +20,12 @@
     selectedValue: "",
 
     domReady: function() {
-        this.selectedValue = this.$.dropdownSelect[this.selectedIndex].text;
+        this.selectedValue = this.$.dropdownSelect.options[this.selectedIndex].text;
     },
 
     selectedIndexChanged: function() {
         console.log("dropdown firing currentIndexChanged!");
-        this.selectedValue = this.$.dropdownSelect[this.selectedIndex].text;
+        this.selectedValue = this.$.dropdownSelect.options[this.selectedIndex].text;
         this.fire('change');
     }
 
