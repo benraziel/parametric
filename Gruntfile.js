@@ -6,6 +6,7 @@ module.exports = function(grunt) {
       target: {
         files: [
   	  		{'dist/': ['parametric-ui.*', 'components/polymer/polymer.js', 'components/platform/platform.js']},
+					{'dist/components.html': 'components-vulcanized.html'}
         ]
       }
     },
@@ -15,7 +16,7 @@ module.exports = function(grunt) {
         // Task-specific options go here.
       },
       files: {
-        'dist/components.html': 'components.html'
+        'components-vulcanized.html': 'components.html'
       },
     }
   },
@@ -29,6 +30,6 @@ module.exports = function(grunt) {
   // Run tasks
   grunt.registerTask('default', [
   				'clean',
-  				'copy',
-          'vulcanize']);
+  				'vulcanize',
+					'copy']);
 };
