@@ -4059,7 +4059,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     },
 
     selectedIndexChanged: function() {
-        console.log("dropdown firing currentIndexChanged!");
         this.selectedValue = this.$.dropdownSelect.options[this.selectedIndex].text;
         this.fire('change');
     }

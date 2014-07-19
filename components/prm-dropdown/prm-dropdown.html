@@ -24,7 +24,6 @@
     },
 
     selectedIndexChanged: function() {
-        console.log("dropdown firing currentIndexChanged!");
         this.selectedValue = this.$.dropdownSelect.options[this.selectedIndex].text;
         this.fire('change');
     }
