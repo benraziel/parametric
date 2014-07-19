@@ -1,0 +1,207 @@
+#paletteContainer {
+    position: absolute;
+    float: right;
+    width: 360px;
+    height: 380px;
+    top: 10px;
+    right: 10px;
+    font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+
+prm-toggle-button /deep/ #ink {
+    left: -32px;
+    width: 80px;
+}
+
+prm-toggle-button /deep/ #canvas {
+    left: 16px;
+    width: 50px;
+    height: 50px;
+}
+
+/*
+    light theme
+    ===========
+*/
+#paletteContainer.light-theme{
+    background: #fff;
+    border: 1px solid #e0e0e0;
+}
+
+/* tabs */
+.light-theme paper-tabs {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.light-theme paper-tabs::shadow {
+    background-color: #fff;
+    color: #03a9f4;
+}
+
+.light-theme paper-tabs::shadow #selectionBar {
+    background-color: #03a9f4;
+}
+
+/* slider */
+.light-theme prm-slider /deep/ #sliderKnobInner,
+.light-theme prm-slider /deep/ #sliderBar::shadow #activeProgress,
+.light-theme prm-slider /deep/ #secondaryProgress,
+.light-theme paper-input /deep/ .focusedColor {
+    background-color: #03a9f4;
+}
+
+/* toggle-button */
+.light-theme prm-toggle-button /deep/ #toggleContainer,
+.light-theme prm-toggle-button /deep/ #offRadio {
+    border-color: #c8c8c8;
+}
+
+.light-theme prm-toggle-button /deep/ #onRadio {
+    background-color: #03a9f4;
+}
+
+.light-theme prm-toggle-button /deep/ #ink[checked] {
+    color: #03a9f4;
+}
+
+.light-theme prm-dropdown /deep/ #dropdownSelect {
+    background-color: #fff;
+    border-color: #c8c8c8;
+}
+
+.light-theme prm-dropdown /deep/ #dropdownContainer::after {
+    color: #fff;
+    background: none repeat scroll 0% 0% #c8c8c8;
+}
+/*
+    dark theme
+    ==========
+*/
+#paletteContainer.dark-theme {
+    background: #1f1f1f;
+    border: 1px solid #444444;
+}
+
+/* tabs */
+.dark-theme paper-tabs {
+    box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.dark-theme paper-tabs /deep/ #tabContainer {
+    color: #03a9f4;
+    background-color: #303030;
+}
+
+.dark-theme paper-tabs::shadow #selectionBar {
+    background-color: #03a9f4;
+}
+
+/* slider */
+.dark-theme prm-slider /deep/ #sliderLabel,
+.dark-theme prm-slider /deep/ #input {
+    color: #eee;
+}
+
+.dark-theme prm-slider /deep/ #sliderKnobInner,
+.dark-theme prm-slider /deep/ #sliderBar::shadow #activeProgress,
+.dark-theme prm-slider /deep/ #secondaryProgress,
+.dark-theme paper-input /deep/ .focusedColor{
+    background-color: #03a9f4;
+}
+
+.dark-theme prm-slider /deep/ #sliderKnob.ring > #sliderKnobInner {
+    background-color: #222222;
+}
+
+.dark-theme prm-slider /deep/ #progressContainer {
+    background-color: #757575;
+}
+
+/* toggle button */
+.dark-theme prm-toggle-button /deep/ #toggleContainer {
+    border-color: #757575;
+}
+
+.dark-theme prm-toggle-button /deep/ #toggleLabel {
+    color: #eee;
+}
+
+.dark-theme prm-toggle-button /deep/ #offRadio {
+    border-color: #c8c8c8;
+}
+
+.dark-theme prm-toggle-button /deep/ #onRadio {
+    background-color: #03a9f4;
+}
+
+.dark-theme prm-toggle-button /deep/ #ink {
+    color: #aaa;
+}
+
+.dark-theme prm-toggle-button /deep/ #ink[checked] {
+    color: #03a9f4;
+}
+
+/* dropdown */
+.dark-theme prm-dropdown /deep/ #dropdownLabel {
+    color: #eee;
+}
+
+.dark-theme prm-dropdown /deep/ #dropdownSelect {
+    color: #eee;
+    background-color: #222222;
+    border-color: #757575;
+}
+
+.dark-theme prm-dropdown /deep/ #dropdownContainer::after {
+    color: #eee;
+    background: none repeat scroll 0% 0% #757575;
+}
+
+/*
+    common properties (for all themes)
+    =================================
+*/
+paper-tabs::shadow #selectionBar {
+    height: 4px;
+}
+
+core-pages .page {
+    padding: 15px 20px 20px 20px;
+}
+
+prm-toggle-button /deep/ #onRadio.fill { /* cancels the x1.1 scale of the toggle button knob */
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+}
+
+
+prm-dropdown /deep/ #dropdownContainer::after {
+    content: "▼"; /* displays a fake 'arrow', on top of the browser's default select arrow */
+    display: inline-block;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-size: 60%;
+    line-height: 26px;
+    padding: 0px 5px;
+    margin-right: 0px;
+    pointer-events: none;
+    border-radius: 0px 5px 5px 0px;
+}
+
+prm-dropdown /deep/ #dropdownSelect {
+    -webkit-appearance: none;
+    margin-right: -20px;
+    padding-right: 20px;
+}
+
+prm-dropdown /deep/ #dropdownSelect::-ms-expand {
+    display: none; /* hides the select arrow in IE */
+}
