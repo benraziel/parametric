@@ -1,14 +1,14 @@
 Parametric
 ==========
 
-Parametric is a UI library for manipulating variables in javascript. It allows to easily embed modern looking, themable UIs for controlling web experiments.
+Parametric is a modern-looking UI library for controlling web experiments.   
+It is built on top of [Polymer](http://www.polymer-project.org), which allows using new web standards such as Web Componenets and Shadow DOM.
+The library is heavily inspired by [dat.GUI](https://code.google.com/p/dat-gui/).
 
 ###[Live Demo](TBD.com)
 
-###
-![Dark Theme](http://benraziel.github.io/parametric/screenshots/parametric-dark.png) ![Light Theme](http://benraziel.github.io/parametric/screenshots/parametric-light.png)
-
-The library is heavily inspired by [DAT.gui](https://code.google.com/p/dat-gui/). It is built on top of [Polymer](www.polymer-project.org), which allows using new web standards such as Web Componenets and Shadow DOM.
+![Dark Theme](http://benraziel.github.io/parametric/screenshots/parametric-dark.png)
+![Light Theme](http://benraziel.github.io/parametric/screenshots/parametric-light.png)
 
 Features
 ========
@@ -21,12 +21,24 @@ Features
 Getting Started
 ===============
 
-1. Copy the files under the _dist_ folder into your project.
-2. Include _platform.js_ as the first script in your HTML page. This script contains polyfills for polymer features which are still unsupported by browsers. Since it is quite large, it is recommended that you include it from a CDN: ```<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.3.3/platform.js"></script>```  
-3. Add a reference to the _parametric-ui_ polymer element: ```<link rel="import" href="../dist/parametric-ui.html">```
-4. Embed the _parametric-ui_ element in your HTML: ```<parametric-ui id="parametric"></parametric-ui>```
-5. To avoid flickering when the page loads, add "unresolved" next to your body tag, like so: ```<body unresolved>``` More information about this is available [here](http://www.polymer-project.org/docs/polymer/styling.html).
-6. Add your controls by editing _parametric-ui.html_. More info on this is available below
+- Copy the files under the _dist_ folder into your project.
+- Include _platform.js_ as the first script in your HTML page. This script contains polyfills for polymer features which are still unsupported by browsers. Since it is quite large, it is recommended that you include it using a CDN:
+```
+<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.3.3/platform.js"></script>
+```  
+- Add a reference to the _parametric-ui_ polymer element:
+```
+<link rel="import" href="../dist/parametric-ui.html">
+```
+- Embed the _parametric-ui_ element in your HTML:
+```
+<parametric-ui id="parametric"></parametric-ui>
+```
+- To avoid flickering when the page loads, add "unresolved" next to your body tag (More information on this issue is available [here](http://www.polymer-project.org/docs/polymer/styling.html)
+```
+<body unresolved>
+```  
+- Add your controls by editing _parametric-ui.html_.
  
 Adding Controls
 ===============
