@@ -5,7 +5,7 @@ Parametric is a modern-looking UI library for controlling web experiments.
 It is built on top of [Polymer](http://www.polymer-project.org), which allows using new web standards such as Web Componenets and Shadow DOM.
 The library is heavily inspired by [dat.GUI](https://code.google.com/p/dat-gui/).
 
-###[Live Demo](TBD.com)
+###[Live Demo](http://benraziel.github.io/parametric/demo/)
 
 ![Dark Theme](http://benraziel.github.io/parametric/screenshots/parametric-dark.png)
 ![Light Theme](http://benraziel.github.io/parametric/screenshots/parametric-light.png)
